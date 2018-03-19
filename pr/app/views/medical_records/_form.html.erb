@@ -1,0 +1,27 @@
+<%= form_with(model: medical_record, local: true) do |form| %>
+  <% if medical_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medical_record.errors.count, "error") %> prohibited this medical_record from being saved:</h2>
+
+      <ul>
+      <% medical_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.collection_select :user_id, @users, :id, :name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :report %>
+    <%= form.text_field :report, id: :medical_record_report %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

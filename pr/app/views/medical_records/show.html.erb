@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @medical_record.user.name %>
+</p>
+
+<p>
+  <strong>Report:</strong>
+  <%= @medical_record.report %>
+</p>
+
+<%= link_to 'Edit', edit_medical_record_path(@medical_record) %> |
+<%= link_to 'Back', medical_records_path %>

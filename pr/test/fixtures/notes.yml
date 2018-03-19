@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  medical_record: one
+  comment: MyString
+  doctor: one
+
+two:
+  medical_record: two
+  comment: MyString
+  doctor: two
